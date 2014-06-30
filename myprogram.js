@@ -21,3 +21,4 @@ require('./currencies.js').getAll(function(data){
 */
 
 
+//https://www.npmjs.org/package/simply-deferred  invoke
