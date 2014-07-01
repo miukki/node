@@ -13,8 +13,8 @@ module.exports = {
 
         if (res.headers['content-length'] == data.length) {
 
-          fs.writeFileSync('cur.json', data);
-          console.log('done, upload!')
+          fs.writeFileSync('cur.json', JSON.stringify(JSON.parse(data)[0]));
+          console.log('done, UPDATE!')
 
         };
 
@@ -45,14 +45,29 @@ module.exports = {
     return fs.readFileSync('cur.json', {'encoding': 'utf8'});
   },
 
-  'rebase': function(cur) {
-    var data = JSON.parse(this.getAllSync())[0];
-    var rebase = []
-    if (!data[cur]) {
-      return;
-    } else {
+  'rebase': function(base) {
+    base = base.toUpperCase();
 
-    }
+    var data = JSON.parse(this.getAllSync());
+    var rebase = {};
+
+    if (!data[base]) {
+      console.log(base + ' undefined! ');
+      return;
+    };
+
+  	for(var i in data) {
+      rebase[i] = data[i] / data[base];
+  	};
+
+    return rebase;
+  },
+
+  'getOne': function(data, cur) {
+    cur  = cur.toUpperCase();
+    var obj = {};
+    obj[cur] = data[cur];
+    return obj;
   }
 
 }
