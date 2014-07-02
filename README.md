@@ -17,11 +17,11 @@ $ node myprogram.js get
 
 // we will  information from disk, network
 //first day
-1. require('./argparser.js')
-2. require('./currencies.js').http()  //update currencies (base currency : USD)
-3. require('./currencies.js').getAll()  //async
-4. require('./currencies.js').getOne()
+- require('./argparser.js')
+- require('./currencies.js').http()  //update currencies (base currency : USD)
+- require('./currencies.js').getAll()  //async
+- require('./currencies.js').getOne()
+- require('simply-deferred')
 
-//next day
 
 
