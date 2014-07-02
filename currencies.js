@@ -2,7 +2,7 @@ var http = require('http');
 var fs = require('fs');
 
 module.exports = {
-  'http': function(url) {
+  'http': function(url, cb) {
     http.get(url, function(res) {
       res.setEncoding('utf8');
       var data = ''; //not null, not object, but string
@@ -15,6 +15,10 @@ module.exports = {
 
           fs.writeFileSync('cur.json', JSON.stringify(JSON.parse(data)[0]));
           console.log('done, UPDATE!')
+
+          if (cb) {
+            cb();
+          };
 
         };
 
