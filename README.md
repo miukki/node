@@ -4,6 +4,8 @@ grab currencies
 ### Environment
 - Install  node.js
 http://nodejs.org/download/
+- Install  npm
+npm install
 
 ### Start app
 $ git clone git@github.com:miukki/node.git
@@ -22,4 +24,5 @@ $ node myprogram.js get
 4. require('./currencies.js').getOne()
 
 //next day
+
 
