@@ -1,0 +1,23 @@
+{
+  "name": "node",
+  "version": "0.0.0",
+  "description": "grab currencies ============",
+  "main": "argparser.js",
+  "dependencies": {
+    "simply-deferred": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/miukki/node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miukki/node/issues"
+  },
+  "homepage": "https://github.com/miukki/node"
+}
