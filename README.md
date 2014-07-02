@@ -4,8 +4,7 @@ grab currencies
 ### Environment
 - Install  node.js
 http://nodejs.org/download/
-- Install  npm
-npm install
+- npm install
 
 ### Start app
 $ git clone git@github.com:miukki/node.git
