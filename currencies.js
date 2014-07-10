@@ -9,12 +9,11 @@ module.exports = {
 
       res.on('data', function(chunk){
         data += chunk;
-        console.log('data.length', data.length);
+        //console.log('data.length', data.length);
 
         if (res.headers['content-length'] == data.length) {
 
           fs.writeFileSync('cur.json', JSON.stringify(JSON.parse(data)[0]));
-          console.log('done, UPDATE!')
 
           if (cb) {
             cb();

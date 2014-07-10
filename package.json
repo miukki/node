@@ -1,8 +1,8 @@
 {
   "name": "node",
   "version": "0.0.0",
-  "description": "grab currencies ============",
-  "main": "argparser.js",
+  "description": "============ grab currencies ============",
+  "main": "main.html",
   "dependencies": {
     "simply-deferred": "^3.0.0"
   },
